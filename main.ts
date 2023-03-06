@@ -1,0 +1,20 @@
+grove.setupWifi(
+SerialPin.C17,
+SerialPin.C16,
+BaudRate.BaudRate115200,
+"ag-digitalfarming-2",
+"ohy9uCofoo4em"
+)
+basic.forever(function () {
+    grove.sendToThinkSpeak(
+    "52SOR6UAI7PTXNDV",
+    input.lightLevel(),
+    75,
+    9,
+    0,
+    0,
+    0,
+    0,
+    0
+    )
+})
